@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body class="dark-body">
+    <h1 class="dark-title">Enter Your Details.</h1>
+    <form action="/submit" method="POST" class="dark-form">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+        <label for="color">Your Favorite Color:</label>
+        <input type="color" id="color" name="color">
+
+        <p>Your Hobbies:</p>
+        <label class="custom-checkbox"><input type="checkbox" name="hobbies" value="books"> Books</label>
+        <label class="custom-checkbox"><input type="checkbox" name="hobbies" value="sports"> Sports</label>
+        <label class="custom-checkbox"><input type="checkbox" name="hobbies" value="games"> Games</label>
+
+        <label for="profession">Your Profession:</label>
+        <select id="profession" name="profession">
+            <option value="developer">💲 Developer</option>
+            <option value="designer">💲 Designer</option>
+            <option value="manager">💲 Manager</option>
+        </select>
+
+        <p>Your Level:</p>
+        <label class="custom-radio"><input type="radio" name="level" value="beginner">💿 Beginner</label>
+        <label class="custom-radio"><input type="radio" name="level" value="advanced">💿 Advanced</label>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <button type="submit" class="dark-button">Continue.</button>
+        <button type="button" class="dark-button surprise-btn" onclick="openYouTube()">Button.</button>
+<script>
+    function openYouTube() {
+        window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank");
+    }
+</script>
+</form>
+</body>
+</html>
