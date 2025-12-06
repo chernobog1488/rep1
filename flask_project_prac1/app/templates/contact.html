@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Contact Us</h1>
+<form method="POST">
+    <label>Your Name:</label>
+    <input type="text" name="name">
+    <label>Your Email:</label>
+    <input type="text" name="email">
+    <label>Your Message:</label>
+    <textarea name="message"></textarea>
+    <button type="submit">Send</button>
+    <h2>Customer Care Department</h2>
+    <p><strong>Name:</strong> {{ contact.manager.name }}</p>
+    <p><strong>Post:</strong> {{ contact.manager.position }}</p>
+    <p><strong>Email:</strong> {{ contact.manager.email }}</p>
+    <p><strong>Contact phone:</strong> {{ contact.manager.phone }}</p>
+
+    <h2></h2>
+    <p><strong>Street:</strong> {{ contact.address.street }}</p>
+    <p><strong>City:</strong> {{ contact.address.city }}</p>
+    <p><strong>Zip code:</strong> {{ contact.address.zip }}</p>
+</form>
+{% endblock %}
