@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Редактирование</h2>
+
+<form method="post">
+    <input class="form-control mb-2" name="codename" value="{{ agent.codename }}">
+    <input class="form-control mb-2" name="phone" value="{{ agent.phone }}">
+    <input class="form-control mb-2" name="email" value="{{ agent.email }}">
+
+    <select class="form-control mb-3" name="access_level">
+        <option selected>{{ agent.access_level }}</option>
+        <option>Секретно</option>
+        <option>Совершенно секретно</option>
+    </select>
+
+    <button class="btn btn-success">Обновить</button>
+</form>
+
+{% endblock %}

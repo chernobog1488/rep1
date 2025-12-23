@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>{{ agent.codename }}</h2>
+
+<ul class="list-group list-group-flush">
+    <li class="list-group-item bg-dark text-light">Телефон: {{ agent.phone }}</li>
+    <li class="list-group-item bg-dark text-light">Email: {{ agent.email }}</li>
+    <li class="list-group-item bg-dark text-light">
+        Доступ: {{ agent.access_level }}
+    </li>
+</ul>
+
+<a class="btn btn-warning mt-3" href="/edit/{{ agent.id }}">Редактировать</a>
+<a class="btn btn-danger mt-3" href="/delete/{{ agent.id }}">Удалить</a>
+<a class="btn btn-secondary mt-3" href="mailto:{{ agent.email }}">
+    Срочное сообщение
+</a>
+
+{% endblock %}
